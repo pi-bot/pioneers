@@ -1,8 +1,8 @@
 # PiBot Pioneers
-Welcome to the online PiBot Pioneers repository.
+Welcome to the online PiBot Pioneers repository! This is the home for the initial code and getting started guides for the PiBot build-your-own robot.  
 
-This will locate the code and instructions for you to start learning and having fun with your robot. 
+Currently the getting started guide is being deleloped in the https://github.com/pi-bot/pioneers/wiki
 
-All Pioneers are Receiving a breadboard and simple components to learn the basics of electronics and robotics whilst 
+WORK IN PROGRESS 
 
-
+Check back soon for progress.
