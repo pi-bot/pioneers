@@ -2,7 +2,7 @@
 ## Info on the system 
 Running `cat /proc/version` gives info on the current os `Linux version 4.9.41-v7+ (dc4@dc4-XPS13-9333) (gcc version 4.9.3 (crosstool-NG crosstool-ng-1.22.0-88-g8460611) ) #1023 SMP Tue Aug 8 16:00:15 BST 2017`
 
-``cat /proc/cpuinfo` gives info on the system processor. For our Raspberry Pi v3 this gives:
+`cat /proc/cpuinfo` gives info on the system processor. For our Raspberry Pi v3 this gives:
 
 ```
 processor	: 0
