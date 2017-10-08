@@ -51,6 +51,10 @@ Serial		: 000000001d75025b
 ```
 
 
+More recently you can also get model information: `cat /proc/device-tree/model`
+```
+Raspberry Pi 3 Model B Rev 1.2
+```
 
 
 
