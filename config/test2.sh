@@ -176,7 +176,8 @@ fi
 
 
 ##-------------------------------------------------------------------------------------------------
-echo "PiBot setup complete! Will now reboot."
+echo "PiBot setup complete! Will now reboot in 10 seconds."
+sleep 10
 sudo /sbin/shutdown -r now
 exit 0
 ##-------------------------------------------------------------------------------------------------
