@@ -88,7 +88,7 @@ copy and execute this script.
 
 Once run it will then reboot the system.  Then open the arduino IDE. On first start it will ask for the default folder for keeping sketches.  Just choose sketchbook/ from the bootome of the folder list.
 
-Then to test go to :cd 
+Then select /dev/ttyS0
 
 The arduino IDE 
 
