@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Check whether we are running sudo
+if [[ $EUID -ne 0 ]]; then
+  	echo "This script must be run as root" 1>&2
+  	exit 1
+fi
+
+# check if system is using the latest 'stretch' version of Raspian
+osInfo=$(cat /etc/os-release)
+if [[ $osInfo == *"stretch"* ]]; then
+    Jessie=true
+    echo "This script has detected stretch"
+else
+    echo "This script only works on Raspian Stretch at this time"
+    exit 1
+fi
