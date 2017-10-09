@@ -157,6 +157,7 @@ if [ -d "/home/pi/sketchbook/hardware/piBot" ]; then
 else
     mkdir /home/pi/sketchbook/hardware/piBot
 #    wget https://raw.githubusercontent.com/SpellFoundry/Sleepy-Pi-Setup/master/boards.txt
+cd ~/home/pi/bin/avrdude-rpi-1-master/
     mv boards.txt /home/pi/sketchbook/hardware/piBot
 fi
 
