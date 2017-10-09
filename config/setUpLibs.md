@@ -17,7 +17,7 @@ The main IDE files we can change are located in `usr/share/arduino/` This folder
 - **hardware** - details oof hardware
 - **libraries** - location for core libraries
 - **examples** - all the examples shown in the menu
-- **lib** - ?
+- **lib** - This contains application files there inc. the arduino_icon.ico
 - **reference** - ?
 - **tools** - ?
 
@@ -26,7 +26,8 @@ The **preference.txt** is found in
 ~/.arduino
 ```
 ### Modifying the Examples and Libraries Directories
-The Examples Directory is replaced with the 4 learning sections for the tutorials.
+The Examples Directory is replaced with the 4 learning sections for the tutorials. It also makes sense to put the **Test-hardware** sketches in here that are used to test all the piBot hardware.
+
 This is done by replacing files in the default **/usr/share/arduino/examples** directory:
 
 ```
@@ -39,17 +40,12 @@ Then we can replace with the examples from the repo:
 mv /location/of/arduino-tutorials/examples /usr/share/arduino/examples
 ```
 
-See the seaxples-original folder for how the directory is organised.
+See the examples-original folder for how the directory is organised.
 
 ### Modifying the Libraries Directories
-The Libraries Directory can also be replaced and simplified for the learning course.
+The Libraries Directory can be simplified  extensiviely for the the learning course.
+Good idea to delete most folders here apart from the servo library. 
 The Libraries directory is found here: **/usr/share/arduino/libraries**. 
-A **Test-hardware** library is added to be used to test all the robots hardware. 
-
-```
-mv /location/of/arduino-tutorials/test-hardware /usr/share/arduino/libraries/test-hardware
-```
-
 
 ```
 echo "avrdude customisation complete. Now setting up the boards.txt"
