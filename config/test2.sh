@@ -127,6 +127,17 @@ else
     echo "Arduino IDE is already installed - skipping"
 fi
 
+## Install Vim
+echo 'Installing VIM...'
+program="vim"
+condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
+if [ $condition -eq 0 ] ; then
+    apt-get install vim -y
+    # create the default sketchbook and libraries that the IDE would normally create on first run
+else
+    echo "VIM is already installed - skipping"
+fi
+
 
 ## Setup the Reset Pin
 echo 'Setup the Reset Pin...'
