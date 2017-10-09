@@ -94,34 +94,18 @@ echo 'Setup the Reset Pin...'
 program="autoreset"
 condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ]; then
-    wget https://github.com/spellfoundry/avrdude-rpi/archive/master.zip
+    wget https://github.com/pi-bot/avrdude-rpi-1/archive/master.zip
     unzip master.zip
-    cd ./avrdude-rpi-master/
+    cd ./avrdude-rpi-1-master/
     cp autoreset /usr/bin
     cp avrdude-autoreset /usr/bin
     mv /usr/bin/avrdude /usr/bin/avrdude-original
     cd /home/pi
     rm -f /home/pi/master.zip
-    rm -R -f /home/pi/avrdude-rpi-master
+    rm -R -f /home/pi/avrdude-rpi-1-master
     ln -s /usr/bin/avrdude-autoreset /usr/bin/avrdude
 else
     echo "$program is already installed - skipping..."
-fi
-
-##-------------------------------------------------------------------------------------------------
-
-## Getting Sleepy Pi to shutdown the Raspberry Pi
-echo 'Setting up the shutdown...'
-cd ~
-if grep -q 'shutdowncheck.py' /etc/rc.local; then
-    echo 'shutdowncheck.py is already setup - skipping...'
-else
-    [ ! -d /home/pi/bin  ] && mkdir /home/pi/bin
-    [ ! -d /home/pi/bin/SleepyPi  ] && mkdir /home/pi/bin/SleepyPi
-    wget https://raw.githubusercontent.com/SpellFoundry/Sleepy-Pi-Setup/master/shutdowncheck.py
-    mv -f shutdowncheck.py /home/pi/bin/SleepyPi
-    sed -i '/exit 0/i python /home/pi/bin/SleepyPi/shutdowncheck.py &' /etc/rc.local
-    # echo "python /home/pi/bin/SleepyPi/shutdowncheck.py &" | sudo tee -a /etc/rc.local
 fi
 
 ##-------------------------------------------------------------------------------------------------
