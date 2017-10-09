@@ -119,11 +119,37 @@ if [ $condition -eq 0 ]; then
     rm -f /home/pi/master.zip
     rm -R -f /home/pi/avrdude-rpi-1-master
     ln -s /usr/bin/avrdude-autoreset /usr/bin/avrdude
+    echo "avrdude has now been configured..."
 else
     echo "$program is already installed - skipping..."
 fi
 
 ##-------------------------------------------------------------------------------------------------
+
+
+## Adding the piBot to the Arduino environment
+echo 'Adding the piBot to the Arduino environment...'
+# ...setup sketchbook
+if [ -d "/home/pi/sketchbook" ]
+then
+    echo "sketchbook exists - skipping..."
+else
+    mkdir /home/pi/sketchbook
+fi
+# ...setup sketchbook/libraries
+if [ -d "/home/pi/sketchbook/libraries" ]
+then
+    echo "sketchbook/libraries exists - skipping..."
+else
+    mkdir /home/pi/sketchbook/libraries
+fi
+# .../sketchbook/hardware
+if [ -d "/home/pi/sketchbook/hardware" ]; then
+    echo "sketchbook/hardware exists - skipping..."
+else
+    mkdir /home/pi/sketchbook/hardware 
+fi
+
 
 # .../sketchbook/hardware/piBot
 if [ -d "/home/pi/sketchbook/hardware/piBot" ]; then
