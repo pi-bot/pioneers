@@ -79,6 +79,19 @@ After the RAspberry Pi has been basically configured it is now ready to complete
 
 ### 4 Installing and Configurign the Arduino IDE
 
+A install script has been made to install and configure the Arduino IDE. 
+
+https://github.com/pi-bot/pioneers/config/autoInstall.sh
+
+copy and execute this script.
+
+
+Once run it will then reboot the system.  Then open the arduino IDE. On first start it will ask for the default folder for keeping sketches.  Just choose sketchbook/ from the bootome of the folder list.
+
+Then to test go to :cd 
+
+The arduino IDE 
+
 ## 2  Communicating with the PiBot Board
 
 **avrdude** is a command-line interface for downloading and uploading to microcontrollers and enabling automation.  It has many features and is also used by the Arduiono IDE. See [here]( http://www.ladyada.net/learn/avr/avrdude.html) for a good overview:
