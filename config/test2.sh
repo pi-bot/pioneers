@@ -181,13 +181,6 @@ else
     echo "Installing SleepyPi 2 Library..."
     git clone https://github.com/SpellFoundry/SleepyPi2.git
 fi
-if [ -d "/home/pi/sketchbook/libraries/sleepy_pi" ]; then
-    echo "sleepy_pi Library exists - skipping..."
-    # could do a git pull here?
-else
-    echo "Installing SleepyPi Library..."
-    git clone https://github.com/SpellFoundry/SleepyPi.git
-fi
 
 if [ -d "/home/pi/sketchbook/libraries/Time" ]; then
     echo "Time Library exists - skipping..."
@@ -195,33 +188,6 @@ else
     echo "Installing Time Library..."
     git clone https://github.com/PaulStoffregen/Time.git
 fi
-
-if [ -d "/home/pi/sketchbook/libraries/LowPower" ]; then
-    echo "LowPower Library exists - skipping..."
-else
-    echo "Installing LowPower Library..."
-    git clone https://github.com/rocketscream/Low-Power.git
-    # rename the directory as Arduino doesn't like the dash
-    mv /home/pi/sketchbook/libraries/Low-Power /home/pi/sketchbook/libraries/LowPower
-fi
-
-
- # Sleepy Pi 1
-if [ -d "/home/pi/sketchbook/libraries/DS1374RTC" ]; then
-    echo "DS1374RTC Library exists - skipping..."
-else
-    echo "Installing DS1374RTC Library..."
-    git clone https://github.com/SpellFoundry/DS1374RTC.git
-fi
-
-# Sleepy Pi 2
-if [ -d "/home/pi/sketchbook/libraries/PCF8523" ]; then
-    echo "PCF8523 Library exists - skipping..."
-else
-    echo "Installing PCF8523 Library..."
-    git clone https://github.com/SpellFoundry/PCF8523.git
-fi
-
 
 if [ -d "/home/pi/sketchbook/libraries/PinChangeInt" ]; then
     echo "PinChangeInt Library exists - skipping..."
@@ -251,6 +217,6 @@ else
 fi
 
 ##-------------------------------------------------------------------------------------------------
-echo "Sleepy Pi setup complete! Please reboot."
+echo "PiBot setup complete! Please reboot."
 exit 0
 ##-------------------------------------------------------------------------------------------------
