@@ -1,8 +1,8 @@
 Th install script **test2.sh** is now working. The final change will be to auto-update the IDE files.
 
-#Modify the Arduino IDE 
+# Modify the Arduino IDE 
 Here we'll explain how the Arduino IDE can be modified to work with the PiBot.
-####Approach 
+#### Approach 
 We wanted to modify the IDE to simplify its options and add some unique styling.
 - create a unique PiBot board configuration and make it the IDE 's default instead of the *UNO*.. **Boards.txt**
 - Create a custom way to program the microcontroller using a **RasPi ISP**
