@@ -13,6 +13,14 @@ echo "avrdude customisation complete. Now setting up the boards.txt"
   
   ```
   
+  ### Prorgrammers.txt
+  
+ The programmers file is located here: `/usr/share/arduino/hardware/arduino/programmers.txt`
+ 
+ ```
+rpigpio.name=RPi GPIO
+rpigpio.protocol=linuxgpio
+```
 
 
 This is how sleepy pi set up the libs
