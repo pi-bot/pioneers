@@ -38,25 +38,19 @@ echo "Now checking for compatible OS version..."
 # check if system is using the latest 'stretch' version of Raspian
 osInfo=$(cat /etc/os-release)
 if [[ $osInfo == *"stretch"* ]]; then
-    Jessie=true
-    echo "This script has detected stretch"
+#    Stretch=true   // May need this flag for later development
+    echo "OS version detected as *stretch*"
 else
-    echo "This script only works on Raspian Stretch at this time"
+    echo "This script only works on Raspian Stretch at this time. Not Compatible. Will now exit..."
     exit 1
 fi
 
-echo '================================================================================ '
-echo '|                                                                               |'
-echo '|                  PiBot Installation Script for Raspian Stretch                |'
-echo '|                                                                               |'
-echo '================================================================================ '
-
-##Update and upgrade
-#sudo apt-get update && sudo apt-get upgrade -y
-
 ## Start Installation
 
-echo 'Begin Installation ? (Y/n) '
+echo " "
+echo "System has satified requirement for PiBot Installation..."
+echo " "
+echo 'Begin Installation ? (type Y followed by enter to proceed) '
 read ReadyInput
 if [ "$ReadyInput" == "Y" ]; then
     echo "Beginning installation..."
@@ -64,6 +58,9 @@ else
     echo "Aborting installation"
     exit 0
 fi
+
+##Update and upgrade
+sudo apt-get update && sudo apt-get upgrade -y
 
 ##-------------------------------------------------------------------------------------------------
 ##-------------------------------------------------------------------------------------------------
@@ -82,7 +79,7 @@ echo 'Installing Arduino IDE...'
 program="arduino"
 condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
-    apt-get install arduino
+    apt-get install arduino -y
     # create the default sketchbook and libraries that the IDE would normally create on first run
     mkdir /home/pi/sketchbook
     mkdir /home/pi/sketchbook/libraries
@@ -90,36 +87,7 @@ else
     echo "Arduino IDE is already installed - skipping"
 fi
 
-##-------------------------------------------------------------------------------------------------
 
-## Enable Serial Port
-# Findme look at using sed to toggle it
-echo 'Enable Serial Port...'
-#echo "enable_uart=1" | sudo tee -a /boot/config.txt
-if grep -q 'enable_uart=1' /boot/config.txt; then
-    echo 'enable_uart=1 is already set - skipping'
-else
-    echo 'enable_uart=1' | sudo tee -a /boot/config.txt
-fi
-if grep -q 'core_freq=250' /boot/config.txt; then
-    echo 'The frequency of GPU processor core is set to 250MHz already - skipping'
-else
-    echo 'core_freq=250' | sudo tee -a /boot/config.txt
-fi
-
-## Disable Serial login
-echo 'Disabling Serial Login...'
-    # Rpi 3
-    systemctl stop serial-getty@ttyS0.service
-    systemctl disable serial-getty@ttyS0.service
-
-## Disable Boot info
-echo 'Disabling Boot info...'
-#sudo sed -i'bk' -e's/console=ttyAMA0,115200.//' -e's/kgdboc=tty.*00.//'  /boot/cmdline.txt
-sed -i'bk' -e's/console=serial0,115200.//'  /boot/cmdline.txt
-
-
-##-------------------------------------------------------------------------------------------------
 
 ## Setup the Reset Pin
 echo 'Setup the Reset Pin...'
