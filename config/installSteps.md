@@ -1,6 +1,11 @@
 ## About 
 These are the steps to prepare the PiBot software from a fresh install of Raspian. They are tested on the new Raspian stretch release: **2017-09-07-raspbian-stretch.img**
 
+1. Install Raspian 
+2. Change the Configs 
+3. Run the Pibot Install Script
+4. Modify the IDE
+
 
 ### 1 Install latest Raspian
 
