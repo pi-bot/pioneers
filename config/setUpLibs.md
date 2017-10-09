@@ -1,3 +1,20 @@
+Th install scrit **test2.sh** is now working. The final change will be to auto-update the IDE files.
+
+```
+echo "avrdude customisation complete. Now setting up the boards.txt"
+  wget https://github.com/pi-bot/.v2/blob/master/boards.txt
+  wget https://github.com/pi-bot/.v2/blob/master/programmers.txt
+  cd /usr/share/arduino/hardware/arduino
+  mv boards.txt boards.txt.bak
+  mv /tmp/boards.txt .
+  mv programmers.txt programmers.txt.bak
+  mv /tmp/programmers.txt .
+  echo "Setup complete now. Launch the Arduino IDE and check that you can use it."
+  
+  ```
+  
+
+
 This is how sleepy pi set up the libs
 
 ```
