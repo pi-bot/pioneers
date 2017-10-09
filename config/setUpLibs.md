@@ -11,6 +11,16 @@ We wanted to modify the IDE to simplify its options and add some unique styling.
 - **preference.txt** Here we'll customise some settings 
 
 ### File locations
+
+The main IDE files we can change are located in `usr/share/arduino/` This folder looks like:
+
+- **hardware** - details oof hardware
+- **libraries** - location for core libraries
+- **examples** - all the examples shown in the menu
+- **lib** - ?
+- **reference** - ?
+- **tools** - ?
+
 The **preference.txt** is found in 
 ```
 ~/.arduino
