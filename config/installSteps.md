@@ -2,15 +2,15 @@
 These are the steps to prepare the PiBot software from a fresh install of Raspian. They are tested on the new Raspian stretch release: **2017-09-07-raspbian-stretch.img**
 
 
-### 1 Install latest Raspian.
+### 1 Install latest Raspian
 
 The latest OS for the Raspberry Pi can be found [Here](https://www.raspberrypi.org/downloads/raspbian/) and the official guide for installing images on your Raspberry Pi can be found [Here](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
-The latest version is: **Raspian Stretch** that is based on the Debian Stretch Linux OS release. 
+The latest version is **Raspian Stretch with Desktop** and this is based on the based on the Debian Stretch Linux OS distribution. 
 
-- **Version**:September 2017
-- **Release date**:2017-09-07
-- **Kernel version**:4.9
+- **Version**: September 2017
+- **Release date**: 2017-09-07
+- **Kernel version**: 4.9
 
 Once you have a working Raspian OS on the Raspberry Pi you can then proceed to make customisations and install the PiBot software. 
 
