@@ -1,4 +1,5 @@
 #!/bin/bash
+# run this script from the command line using 'sudo bash ./install.sh' (assuming your in the same directory)
 echo -e "\E[32m"
 echo " ____  __  ____   __  ____      ____  ____  ____  _  _  ____  ";
 echo "(  _ \(  )(  _ \ /  \(_  _)    / ___)(  __)(_  _)/ )( \(  _ \ ";
@@ -206,8 +207,8 @@ echo "Setup complete now. Launch the Arduino IDE and check that you can use it."
 
 
 ##-------------------------------------------------------------------------------------------------
-echo "PiBot setup complete! Will now reboot in 10 seconds."
-sleep 10
+echo "PiBot setup complete! Will now reboot in 20 seconds. This script can terminated before a reboot with 'cntrl+c' "
+sleep 20
 sudo /sbin/shutdown -r now
 exit 0
 ##-------------------------------------------------------------------------------------------------
