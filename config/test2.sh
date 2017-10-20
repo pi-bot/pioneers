@@ -163,6 +163,8 @@ fi
 
 
 ## Adding the piBot to the Arduino environment
+
+
 echo 'Adding the piBot to the Arduino environment...'
 # ...setup sketchbook
 if [ -d "/home/pi/sketchbook" ]
@@ -178,36 +180,29 @@ then
 else
     mkdir /home/pi/sketchbook/libraries
 fi
-# .../sketchbook/hardware
-if [ -d "/home/pi/sketchbook/hardware" ]; then
-    echo "sketchbook/hardware exists - skipping..."
+
+echo "Now customising the boards.txt and programmers.txt files"
+cd /usr/share/arduino/hardware/arduino
+if [ -f "boards.txt.bak" ]
+then
+	echo "boards.txt already backed up."
+  rm -rf boards.txt
 else
-    mkdir /home/pi/sketchbook/hardware 
+	mv boards.txt boards.txt.bak
 fi
 
-
-# .../sketchbook/hardware/piBot
-if [ -d "/home/pi/sketchbook/hardware/piBot" ]; then
-    echo "sketchbook/hardware/piBot exists - skipping..."
+if [ -f "programmers.txt.bak" ]
+then
+	echo "programmers.txt already backed up."
+  rm -rf programmers.txt
 else
-    mkdir /home/pi/sketchbook/hardware/piBot
-#    wget https://raw.githubusercontent.com/SpellFoundry/Sleepy-Pi-Setup/master/boards.txt
-cd /home/pi/bin/avrdude-rpi-1-master/
-    mv boards.txt /home/pi/sketchbook/hardware/piBot
+	mv programmers.txt programmers.txt.bak
 fi
 
-#echo "avrdude customisation complete. Now setting up the boards.txt"
-#  wget https://github.com/pi-bot/.v2/blob/master/boards.txt
-# wget https://github.com/pi-bot/.v2/blob/master/programmers.txt
-#  cd /usr/share/arduino/hardware/arduino
-#  mv boards.txt boards.txt.bak
-# mv /tmp/boards.txt .
-#  mv programmers.txt programmers.txt.bak
-#  mv /tmp/programmers.txt .
-#  echo "Setup complete now. Launch the Arduino IDE and check that you can use it."
+wget https://raw.githubusercontent.com/pi-bot/.v2/master/boards.txt
+wget https://raw.githubusercontent.com/pi-bot/.v2/master/programmers.txt
 
-
-
+echo "Setup complete now. Launch the Arduino IDE and check that you can use it."
 
 
 ##-------------------------------------------------------------------------------------------------
