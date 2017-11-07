@@ -6,12 +6,12 @@ As your reading this you must have gained access to gitHub via your GitHub usern
 
 For public repos creating a clone would typically follow the form: 
 ```
-git clone git://github.com/username/reponame.git
+git clone git://github.com/pi-bot/pioneers.git
 ```
 For **private** repos however a slightly different form is required:
 
 ```
-git clone https://username@github.com/username/reponame.git
+git clone https://username@github.com/pi-bot/pioneers.git
 ```
 The difference you will see is the association with the specific user.  All Pioneers usernames are added to the private repo and this restricts access to only these users.  The second issue however is with  setting up **unobtrusive authentication**. Everytime you use git as a specific user you will be required to issue your password, that is unless you set up secure authentication with **ssh**.  By adding your raspberry pi's (and or laptops) public ssh key to your GitHub account this will enable you to access all provate repositories with out the need for a password everytime. This is especially 
 
