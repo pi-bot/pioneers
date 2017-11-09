@@ -205,6 +205,14 @@ wget https://raw.githubusercontent.com/pi-bot/.v2/master/programmers.txt
 
 echo "Setup complete now. Launch the Arduino IDE and check that you can use it."
 
+##-------------------------------------------------------------------------------------------------
+
+
+## Setting up and configuring Audio 
+echo 'Setting up and configuring the piBots Audio'
+amixer cset numid=3 1
+sh -c "echo 'dtoverlay=pwm-2chan,pin=18,func=2,pin2=19,func2=2' >> /boot/config.txt"
+echo 'audio configuration complete'
 
 ##-------------------------------------------------------------------------------------------------
 echo "PiBot setup complete! Will now reboot in 20 seconds. This script can terminated before a reboot with 'cntrl+c' "
