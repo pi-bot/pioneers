@@ -13,11 +13,17 @@ For **private** repos however a slightly different form is required:
 ```
 git clone https://username@github.com/pi-bot/pioneers.git
 ```
+So for me this is:
+```
+git clone https://pi-bot@github.com/pi-bot/pioneers.git
+```
 The difference you will see is the association with the specific user.  All Pioneers usernames are added to the private repo and this restricts access to only these users.  The second issue however is with  setting up **unobtrusive authentication**. Everytime you use git as a specific user you will be required to issue your password, that is unless you set up secure authentication with **ssh**.  By adding your raspberry pi's (and or laptops) public ssh key to your GitHub account this will enable you to access all provate repositories with out the need for a password everytime. This is especially 
 
 This is especially useful if you use git commands in scripts. e.g. a script to update the **pioneer** repo automatically on each boot or at scheduled times.
 
 https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+
+Once you upload your public key to your GitHub account settings its then easy to use the repo without any need for passwords. 
 
 ## Programming overview
 As the getting started guide will show there are two ways of coding with the Pibot:
