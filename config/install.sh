@@ -200,13 +200,26 @@ else
 	mv programmers.txt programmers.txt.bak
 fi
 
-wget https://raw.githubusercontent.com/pi-bot/.v2/master/boards.txt
-wget https://raw.githubusercontent.com/pi-bot/.v2/master/programmers.txt
+# wget https://raw.githubusercontent.com/pi-bot/.v2/master/boards.txt  //This was old way of sourcing resource
+# wget https://raw.githubusercontent.com/pi-bot/.v2/master/programmers.txt
 
-echo "Setup complete now. Launch the Arduino IDE and check that you can use it."
+cp ~/pioneers/config/programmers.txt programmers.txt
+cp ~/pioneers/config/boards.txt boards.txt
 
 ##-------------------------------------------------------------------------------------------------
+## Now replacing the arduino's example and library directories 
+echo "Now replacing the Arduino IDE's examples and Libraries directories"
 
+cd /usr/share/arduino/hardware/arduino
+if [ -f "/usr/share/arduino/examples.original" ]
+then
+	echo "examples directory already backed up."
+  rm -rf /usr/share/arduino/examples
+else
+	mv /usr/share/arduino/examples /usr/share/arduino/examples.original 
+fi
+
+cp ~/pioneers/examples /usr/share/arduino/examples
 
 ## Setting up and configuring Audio 
 echo 'Setting up and configuring the piBots Audio'
