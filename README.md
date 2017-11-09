@@ -23,7 +23,12 @@ This is especially useful if you use git commands in scripts. e.g. a script to u
 
 https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
 
-Once you upload your public key to your GitHub account settings its then easy to use the repo without any need for passwords. 
+Once you upload your public key to your GitHub account settings its then easy to use the repo without any need for passwords. In order to do this however another alternative form of accessing the resource needs to be used:
+
+```
+git clone git@github.com:pi-bot/pioneers.git
+```
+I think this is because the git system is now accessing the repo on your behalf.
 
 ## Programming overview
 As the getting started guide will show there are two ways of coding with the Pibot:
