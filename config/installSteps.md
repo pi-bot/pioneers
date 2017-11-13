@@ -74,7 +74,7 @@ e.g.
 
 
 ## Remaining Steps
-After the RAspberry Pi has been basically configured it is now ready to complete the installation and set up. Tihs includes 
+After the Raspberry Pi has been basically configured it is now ready to complete the installation and set up. This includes 
 1. Install required software packages (Arduino and minicom)
 2. Configure the serial and reset pins to work with the piBot Board. 
 3. Modify the Arduino IDE interface to a) upload to the piBot board b)replace the default example files with piBot examples
