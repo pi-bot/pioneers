@@ -1,5 +1,5 @@
 ## About 
-These are the steps to prepare the PiBot software from a fresh install of Raspian. They are tested on the new Raspian stretch release: **2017-09-07-raspbian-stretch.img**
+These are the steps to prepare the PiBot software from a fresh install of Raspian. **N.B.** the supplied sd card is pre-configured and should work *out-the-box*. These steps have been tested as working on the Raspian stretch release: **2017-09-07-raspbian-stretch.img**
 
 1. Install Raspian 
 2. Change the Configs 
