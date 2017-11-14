@@ -1,6 +1,8 @@
 # PiBot Pioneers
 Welcome to the online PiBot Pioneers repository! This is the home for the development of all the PiBot's code as well as the open hardware body parts.  The repos [wiki](https://github.com/pi-bot/pioneers/wiki) is the place to learn about the code. (N.B. still under development.) See the [PiBot Pioneers Website](http://www.pibot.org/pioneers) for further support. 
 
+**N.B.** The supplied sd card with each piioneer kit is configured to work *out-of-the-box*. The PiBot board will work however all code and excercises will not be there yet. This is the main purspose of downlaoding and accessing the pioneers repo.
+
 ## Private repos from the command line
 As your reading this you must have gained access to gitHub via your GitHub username:).  Here's a quick note on the use of private repos. Their key difference is their requirement for *authentication*.  This leads to a different form for accessing the repo. 
 
