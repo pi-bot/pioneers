@@ -1,10 +1,13 @@
 ## About 
 These are the steps to prepare the PiBot software from a fresh install of Raspian. **N.B.** the supplied sd card is pre-configured and should work *out-the-box*. These steps have been tested as working on the Raspian stretch release: **2017-09-07-raspbian-stretch.img**
 
-1. Install Raspian 
-2. Change the Configs 
-3. Run the Pibot Install Script
-4. Modify the IDE
+1. Install latest Raspian 
+2. Change Default Settings 
+3. Configure Remote Access
+4. Configure Access to the PiBot Board
+5. Install required software
+6. Customize the Arduion IDE
+7. Install and update PiBot code and excercise repositories
 
 
 ### 1 Install latest Raspian
@@ -74,6 +77,12 @@ e.g.
 
 
 ## Remaining Steps
+
+**N.B.** All remaining steps can be done with the help of Bash Scripting.  These are predominantly sequences of terminal commands that are run sequentailly to complete tasks in full. See [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) fpr a basic intro. 
+
+In order to do this in an easy to follow way I have created a *master* script: **install.sh** that then runs other skripts that perfrom individual tasks.
+
+Configure Access to the PiBot Board
 After the Raspberry Pi has been basically configured it is now ready to complete the installation and set up. This includes 
 1. Install required software packages (Arduino and minicom)
 2. Configure the serial and reset pins to work with the piBot Board. 
