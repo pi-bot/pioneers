@@ -10,7 +10,7 @@
 # 
 # execution and errors in the script are logged in the install.log iogfile
 log=install.log
-$ date | tee $log
+date | tee $log
 echo -e "\E[32m"
 echo " ____  __  ____   __  ____      ____  ____  ____  _  _  ____  ";
 echo "(  _ \(  )(  _ \ /  \(_  _)    / ___)(  __)(_  _)/ )( \(  _ \ ";
