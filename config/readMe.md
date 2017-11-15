@@ -98,7 +98,7 @@ The scrips are commented so the best way to see how they work and what changes t
 The **programmers.txt	& boards.txt** are used by the  **configureAudio.sh** script to modify the Arduino IDE. The **archive** and **related** folders are for previous code that are left for interest or reference.
 
 ### Running The Scripts 
-The scripts can be run by first downloading this repo to the local machine:
+The scripts can be run by first downloading this repo to the local machine's home directory. (**N.B.** The home directory is the default location for the command line interface when opening the Terminal.  In linux it is identified by **~/**). The following command will locate the repo in the home directory if this is the current location of the terminal:
 ```
 git clone https://pi-bot@github.com/pi-bot/pioneers.git
 ```
