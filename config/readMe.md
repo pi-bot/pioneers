@@ -112,15 +112,14 @@ sudo chmod +x *
 ```
 Then each script can be run as:
 ```
-./xxxxx.sh
+sudo ./xxxxx.sh
 ```
 (superimposing the actual script name for xxxxx.sh)
 
 The master script is run with:
 ```
-./ master.sh
+sudo ./ master.sh
 ```
-A reboot is then made to complete the configuration and set-up process. 
-
+A reboot is then made to complete the configuration and set-up process. The system should now be fully configured and ready to use.
 
 
