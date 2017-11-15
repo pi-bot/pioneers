@@ -78,7 +78,7 @@ ssh piBot@piBot-X2.local
 ```
  Successfull access indicated it was working.  To test VNC I used the inbuilt **Screen Sharing** app and this also connected without issue. 
 
-## 4 Run Bash Install Scripts
+## 4 Bash Install Scripts Overview
 
 **Bash** is the native and popular linux scripting language that is used in the Raspain command line interface.  Bash scripts  are predominantly sequences of terminal commands that are run to complete various tasks. See [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) for a basic intro.  
 
@@ -96,3 +96,4 @@ The scrips are commented so the best way to see how they work and what changes t
 7)  **master.sh**	the lead script that runs the sub-scripts and logs the results.
 
 The **programmers.txt	& boards.txt** are used by the  **configureAudio.sh** script to modify the Arduino IDE. The **archive** and **related** folders are for previous code that are left for interest or reference.
+### Running The Scrpts 
