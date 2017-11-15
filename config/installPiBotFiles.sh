@@ -7,10 +7,10 @@
 
 echo "Now replacing the Arduino IDE's examples directories"
 
-if [ -f "/usr/share/arduino/examples.backup" ]
+if [ -d "/usr/share/arduino/examples.backup" ]
 then
 	echo "examples directory already backed up."
-  rm -rf /usr/share/arduino/examples
+ 	rm -rf /usr/share/arduino/examples
 else
 	mv /usr/share/arduino/examples /usr/share/arduino/examples.backup
 fi
@@ -21,7 +21,7 @@ cp ../examples /usr/share/arduino/examples
 
 echo "Now replacing the Arduino IDE's library directories"
 
-if [ -f "/usr/share/arduino/libraries.backup" ]
+if [ -d "/usr/share/arduino/libraries.backup" ]
 then
 	echo "library directory already backed up."
 	rm -rf /usr/share/arduino/libraries
