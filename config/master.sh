@@ -18,12 +18,29 @@ echo " ) __/ )(  ) _ ((  O ) )(      \___ \ ) _)   )(  ) \/ ( ) __/ ";
 echo "(__)  (__)(____/ \__/ (__)     (____/(____) (__) \____/(__)   ";
 echo -e "\E[0m"
 echo "Welcome to the PiBot Setup Installer."
+echo " "
+echo "This installation script has the following requirements:"
+echo "1) Script must be run as root user"
+echo "2) Raspberry Pi must be v3"
+echo "3) The OS must be the latest 'Raspian Stretch'"
+echo "2) There must be a working internet connection"
+echo " "
+echo 'Begin Installation ? (type Y followed by enter to proceed) '
+read ReadyInput
+if [ "$ReadyInput" == "Y" ]; then
+    echo "Beginning installation..." | tee -a $log
+else
+    echo "Aborting installation"  | tee -a $log
+    exit 0
+fi
+echo " "
+echo "Will now perform tests for these requirements before continuing ...."
 bash checkCompatible.sh &&
 ## Start Installation
 echo " "
 echo "System has satified all requirement for PiBot Installation..."  | tee -a $log
 echo " "
-echo "The master sript will now complete the following operations:"
+echo "The master script will now complete the following operations:"
 echo "1) check and install required software packages"
 echo "2) configure a serial connection to the PiBot Board"
 echo "3) configure the Audio Interfaces"
