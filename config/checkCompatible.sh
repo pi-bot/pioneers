@@ -52,3 +52,4 @@ else
         echo "Unable to Connect, try again !!!"
         exit 0
 fi
+echo "Checks complete"
