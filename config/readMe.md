@@ -53,26 +53,21 @@ A laptop is pehaps the best device for interfacing with the piBot as it is semi-
 VNC or Virtual NEtwork Connection allows you to connect to your systems desktop remotely over a network (including the internet).  The Raspberry Pi has a **VNC server** selected and now operational in its configs and it needs a couple of option changes to connect it to a **VNC viewer**.  (I use the inbuild VNC viewer Screen Sharing on my mac).  From the VNC Iconon on the desktop menu bar (top right next to bluetooth) select the VNC server interface window. From the munu pull down on the windows top-right select options.... Under **Encryption:** change to **prefere off**. under **Authentication** select **VNC password**.  Now on the right select **Users and Permissions**.  Double click the **Standard user (user)** from the top and choose a password that will be your login for this.  Click **apply**.  Now VNC is set up and ready to go. 
 for more details see https://www.raspberrypi.org/documentation/remote-access/vnc/
 
-### Run Bash Install Scripts
+### 4 Run Bash Install Scripts
+
 **Bash** is the native and popular linux scripting language that is used in the Raspain command line interface.  Bash scripts predominantly sequences of terminal commands that are run sequentailly to complete various tasks. See [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) for a basic intro.  
 
 This directory contains all the scripts to set up a cudtomised and configured software enviroment to work with the PiBot. In order to do this in an easy-to-follow-way I have created a *master* script: **master.sh** that then calls all other skripts that perform individual tasks. This **master** - **sub-script** arrangement makes it possible to run and test each task independently and makes the whole install process more manageable and easy to debug. 
 
 The scrips are commented so the best way to see how they work and what changes they are making is to look at them directly.  For now here is an overaview of all scripts with a brief description of what they do. 
 
-- 1. check and install required software packages"
-2 configure a serial connection to the PiBot Board"
-3 configure the Audio Interfaces"
-4 modify avrdude and reset pin'"
-5) customise and configure the arduiono IDE"
-6) populate the arduino IDE with PiBot libraries and excercise files"
+0) **Compatible.sh** - checks that the Raspberry Pi and Raspian enviroment are compatible
+1) **installPackages.sh** checks and install required software packages
+2) **configureSerial.sh**	configure a serial connection to the PiBot Board
+3) **configureAudio.sh** configure the Audio Interfaces
+4) **modAvrdude.sh**	modifies avrdude and reset pin (used to send firmware to the PiBot board)
+5) **configureArduino.sh** customise and configure the arduiono IDE
+6) **installPiBotFiles.sh**	populate the arduino IDE with PiBot libraries and excercise files
+7)  **master.sh**	the lead script that runs the sub-scripts and logs the results.
 
-
-Configure Access to the PiBot Board
-After the Raspberry Pi has been basically configured it is now ready to complete the installation and set up. This includes 
-1. Install required software packages (Arduino and minicom)
-2. Configure the serial and reset pins to work with the piBot Board. 
-3. Modify the Arduino IDE interface to a) upload to the piBot board b)replace the default example files with piBot examples
-4.
-5.
-
+The **programmers.txt	& boards.txt** are used by the  **configureAudio.sh** script to modify the Arduino IDE. The **archive** and **related** folders are for previous code that are left for interest or reference.
