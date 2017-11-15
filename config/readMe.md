@@ -1,14 +1,14 @@
 ## About 
-These are the steps to prepare the PiBot software from a fresh install of Raspian. **N.B.** the supplied sd card is pre-configured and should work *out-the-box*. These steps have been tested as working on the Raspian stretch release: **2017-09-07-raspbian-stretch.img**
+These steps set up the full software enviroment of the PiBot from a fresh install of Raspian. They are put here for reference and interest only. 
+
+**N.B.** the supplied sd card is pre-configured and should work *out-the-box*! There is now a collection of pre-made software images on the website here: (http://www.pibot.org/pioneers/distro/)
+
+These steps have been tested as working on the Raspian stretch release: **2017-09-07-raspbian-stretch.img**
 
 1. Install latest Raspian 
 2. Change Default Settings 
 3. Configure Remote Access
-4. Configure Access to the PiBot Board
-5. Install required software
-6. Customize the Arduion IDE
-7. Install and update PiBot code and excercise repositories
-
+4. Run the install scripts from **master.sh**
 
 ### 1 Install latest Raspian
 
@@ -21,7 +21,6 @@ The latest version is **Raspian Stretch with Desktop** and this is based on the 
 - **Kernel version**: 4.9
 
 Once you have a working Raspian OS on the Raspberry Pi you can then proceed to make customisations and install the PiBot software. 
-
 
 ### 2 Changes to the default OS 
 Raspian has a configuration GUI for making common alterations to its OS.  This is opened from  *Start > Preferences > Raspberry Pi Configurion*.
@@ -54,33 +53,20 @@ A laptop is pehaps the best device for interfacing with the piBot as it is semi-
 VNC or Virtual NEtwork Connection allows you to connect to your systems desktop remotely over a network (including the internet).  The Raspberry Pi has a **VNC server** selected and now operational in its configs and it needs a couple of option changes to connect it to a **VNC viewer**.  (I use the inbuild VNC viewer Screen Sharing on my mac).  From the VNC Iconon on the desktop menu bar (top right next to bluetooth) select the VNC server interface window. From the munu pull down on the windows top-right select options.... Under **Encryption:** change to **prefere off**. under **Authentication** select **VNC password**.  Now on the right select **Users and Permissions**.  Double click the **Standard user (user)** from the top and choose a password that will be your login for this.  Click **apply**.  Now VNC is set up and ready to go. 
 for more details see https://www.raspberrypi.org/documentation/remote-access/vnc/
 
-#### Remote Command Line Interface with SSH
+### Run Bash Install Scripts
+**Bash** is the native and popular linux scripting language that is used in the Raspain command line interface.  Bash scripts predominantly sequences of terminal commands that are run sequentailly to complete various tasks. See [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) for a basic intro.  
 
-We have already set up ssh in the Raspberry Pi Config and now we shall make it possible to connect to the system securely without the need for a password.  I use a mac laptop that has as terminal built in which is convenient. There is additional free software for command line interfacing in windows and please see the official raspberry pi guide [here](https://www.raspberrypi.org/documentation/remote-access/ssh/)
+This directory contains all the scripts to set up a cudtomised and configured software enviroment to work with the PiBot. In order to do this in an easy-to-follow-way I have created a *master* script: **master.sh** that then calls all other skripts that perform individual tasks. This **master** - **sub-script** arrangement makes it possible to run and test each task independently and makes the whole install process more manageable and easy to debug. 
 
-Once you have SSH working its a good idea to be able to make connections without the need for passwords. Refer to 
-[this](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md/) guide for how to do this.  
+The scrips are commented so the best way to see how they work and what changes they are making is to look at them directly.  For now here is an overaview of all scripts with a brief description of what they do. 
 
-I did:
+- 1. check and install required software packages"
+2 configure a serial connection to the PiBot Board"
+3 configure the Audio Interfaces"
+4 modify avrdude and reset pin'"
+5) customise and configure the arduiono IDE"
+6) populate the arduino IDE with PiBot libraries and excercise files"
 
-```
-ssh-keygen -t rsa -C harry@Harrys-MacBook-Pro
-```
-You will then be given a prompt to save the generated keys. Save it in the default location (/home/pi/.ssh/id_rsa) by just hitting Enter.
-
-
-```cat ~/.ssh/id_rsa.pub | ssh <USERNAME>@<IP-ADDRESS> 'cat >> .ssh/authorized_keys'```
-e.g.
-
-```cat ~/.ssh/id_rsa.pub | ssh pi@192.168.15.4 'cat >> .ssh/authorized_keys' ```
-
-
-
-## Remaining Steps
-
-**N.B.** All remaining steps can be done with the help of Bash Scripting.  These are predominantly sequences of terminal commands that are run sequentailly to complete tasks in full. See [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) fpr a basic intro. 
-
-In order to do this in an easy to follow way I have created a *master* script: **install.sh** that then runs other skripts that perfrom individual tasks.
 
 Configure Access to the PiBot Board
 After the Raspberry Pi has been basically configured it is now ready to complete the installation and set up. This includes 
@@ -89,26 +75,4 @@ After the Raspberry Pi has been basically configured it is now ready to complete
 3. Modify the Arduino IDE interface to a) upload to the piBot board b)replace the default example files with piBot examples
 4.
 5.
-
-**N.B.** There is now an install script that does the complete steps automatically. Best to use this and look at the comments and commands in the script if you want to know whats going on in more detail.
-
-
-
-### 4 Installing and Configurign the Arduino IDE
-
-A install script has been made to install and configure the Arduino IDE. 
-
-https://github.com/pi-bot/pioneers/blob/master/config/install.sh
-
-Once run it will then reboot the system.  Then open the arduino IDE. On first start it will ask for the default folder for keeping sketches.  Just choose sketchbook/ from the bootom of the folder list.
-
-A new sketch should then open in the IDE.  From the top menu you can check that everything is configured correctly by looking under **Tools>** Here you should see the following:
-
-- Board > **PiBot**
-- Serial Port > **/dev/ttyS0**
-- Programmer > **Raspberry Pi GPIO**
- 
-If this is all set then you should be ready to upload your first sketch. 
-
-For Troubleshooting uploading to the PiBot MCU please look for help on the PiBot Forum.
 
