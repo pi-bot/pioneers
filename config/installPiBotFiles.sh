@@ -24,12 +24,10 @@ echo "Now replacing the Arduino IDE's library directories"
 if [ -d "/usr/share/arduino/libraries.backup" ]
 then
 	echo "library directory already backed up."
-	rm -rf /usr/share/arduino/libraries
 else
  	mkdir /usr/share/arduino/libraries.backup
 	mv /usr/share/arduino/libraries/* /usr/share/arduino/libraries.backup/
 fi
-
 cd /usr/share/arduino/libraries
 git clone https://github.com/pi-bot/NeoPixel
 git clone https://github.com/pi-bot/DC_motor-driver
