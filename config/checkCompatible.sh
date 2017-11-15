@@ -1,17 +1,6 @@
 #!/bin/bash
 # run this script from the command line using 'sudo bash ./checkCompatible.sh' (assuming your in the same directory)
 # This script checks compatibibility for installing the PiBot software.
-echo " "
-echo "This installation script has the following requirements:"
-echo "1) Script must be run as root user"
-echo "2) Raspberry Pi must be v3"
-echo "3) The OS must be the latest 'Raspian Stretch'"
-echo "2) There must be a working internet connection"
-echo " "
-echo "Will now perform tests for these requirements before continuing ...."
-echo " "
-echo "1: Checking for execution as root...."
-
 # Check whether script is being run as sudo
 if [[ $EUID -ne 0 ]]; then
   	echo "This script must be run as root" 1>&2
