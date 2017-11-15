@@ -53,7 +53,3 @@ else
         echo "Unable to Connect, try again !!!"
         exit 0
 fi
-## Start Installation
-
-echo " "
-echo "System has satified all requirement for PiBot Installation..."
