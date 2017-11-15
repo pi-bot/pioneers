@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # run this script from the command line using 'sudo bash ./checkCompatible.sh' (assuming your in the same directory)
 # This script checks compatibibility for installing the PiBot software.
 echo " "
