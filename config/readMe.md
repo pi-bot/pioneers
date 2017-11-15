@@ -22,8 +22,13 @@ The latest version is **Raspian Stretch with Desktop** and this is based on the 
 
 Once you have a working Raspian OS on the Raspberry Pi you can then proceed to make customisations and install the PiBot software. 
 
-## 2 Changes to the default OS 
-Raspian has a configuration GUI for making common alterations to its OS.  This is opened from  *Start > Preferences > Raspberry Pi Configuration*.
+## 2 OS Customizations
+
+Good practice following the booting of a new distro image is to update all installed packages:
+```
+sudo apt-get update && sudo apt-get upgrade -y 
+```
+Next thng to do is to replace the default username and passwords and to change some other common defaults for use with the PiBot. piBotRaspian has a configuration GUI for making common alterations to its OS.  This is opened from  *Start > Preferences > Raspberry Pi Configuration*.
 Once opened we can now make the following changes: 
 
 From the **System** tab :
@@ -41,6 +46,9 @@ From the **Localisation** tab select *Set Keyboard* and select :
 - **Variant**: English (US)
 
 Thats it! You can now reboot to bring these changes into effect.
+
+The only other change I made was to change the default background image of the Desktop. I did this by going to  *Start > Preferences > Appearance Settings*.  Then I selected *auror.jpg* from the **Picture** input. 
+
 
 ## 3 Remote User Interfacing with the Raspberry Pi 
 
