@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # run this script from the command line using 'sudo bash ./install.sh' (assuming your in the same directory)
 # This script is the **master** script that completes the full PiBot configuration and code installation from a vanilla raspian image.
 # sub-scripts can be run on individual lines:
