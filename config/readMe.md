@@ -55,9 +55,9 @@ for more details see https://www.raspberrypi.org/documentation/remote-access/vnc
 
 ## 4 Run Bash Install Scripts
 
-**Bash** is the native and popular linux scripting language that is used in the Raspain command line interface.  Bash scripts predominantly sequences of terminal commands that are run sequentailly to complete various tasks. See [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) for a basic intro.  
+**Bash** is the native and popular linux scripting language that is used in the Raspain command line interface.  Bash scripts  are predominantly sequences of terminal commands that are run to complete various tasks. See [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) for a basic intro.  
 
-This directory contains all the scripts to set up a cudtomised and configured software enviroment to work with the PiBot. In order to do this in an easy-to-follow-way I have created a *master* script: **master.sh** that then calls all other skripts that perform individual tasks. This **master** - **sub-script** arrangement makes it possible to run and test each task independently and makes the whole install process more manageable and easy to debug. 
+This directory contains all the scripts to set up a customised and configured software enviroment to work with the PiBot. In order to do this in an easy-to-follow-way I have created a *master* script: **master.sh** that then calls all other scripts that perform individual tasks. This **master** - **sub-script** arrangement makes it possible to run and test each task independently and makes the whole install process more manageable and easy to debug. 
 
 The scrips are commented so the best way to see how they work and what changes they are making is to look at them directly.  For now here is an overaview of all scripts with a brief description of what they do. 
 
