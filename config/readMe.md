@@ -58,8 +58,14 @@ A laptop is pehaps the best device for interfacing with the piBot as it is semi-
 
 ### Remote Desktop with VNC
 
-VNC or Virtual NEtwork Connection allows you to connect to your systems desktop remotely over a network (including the internet).  The Raspberry Pi has a **VNC server** selected and now operational in its configs and it needs a couple of option changes to connect it to a **VNC viewer**.  (I use the inbuild VNC viewer Screen Sharing on my mac).  From the VNC Iconon on the desktop menu bar (top right next to bluetooth) select the VNC server interface window. From the munu pull down on the windows top-right select options.... Under **Encryption:** change to **prefere off**. under **Authentication** select **VNC password**.  Now on the right select **Users and Permissions**.  Double click the **Standard user (user)** from the top and choose a password that will be your login for this.  Click **apply**.  Now VNC is set up and ready to go. 
-for more details see https://www.raspberrypi.org/documentation/remote-access/vnc/
+VNC or Virtual Network Connection allows you to connect to your systems desktop remotely over a network (including the internet).  The Raspberry Pi has a **VNC server** that we selected in *Raspi-Config*. It now needs a couple of option changes to connect it to a **VNC viewer**.  (I use the inbuilt VNC viewer *Screen Sharing app* on my mac). 
+
+From the VNC Icon on on the desktop menu bar (top right next to bluetooth) select the VNC server interface window. From the menu pull-down on the windows top-right select **options**.... 
+Under **Encryption:** change to **prefere off**.
+Under **Authentication** select **VNC password**.
+Now on the right select **Users and Permissions**.  Double click the **Standard user (user)** from the top and choose a password that will be your login for this.  Click **apply**.  Now VNC is set up and ready to go!
+
+For more details see https://www.raspberrypi.org/documentation/remote-access/vnc/
 
 ## 4 Run Bash Install Scripts
 
