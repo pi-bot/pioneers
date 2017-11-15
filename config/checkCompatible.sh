@@ -2,6 +2,8 @@
 # run this script from the command line using 'sudo bash ./checkCompatible.sh' (assuming your in the same directory)
 # This script checks compatibibility for installing the PiBot software.
 # Check whether script is being run as sudo
+echo " "
+echo "1: Checking for execution as root...."
 if [[ $EUID -ne 0 ]]; then
   	echo "This script must be run as root" 1>&2
   	exit 1
