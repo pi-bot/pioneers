@@ -30,7 +30,7 @@ else
 fi
 cd /usr/share/arduino/libraries
 git clone https://github.com/pi-bot/NeoPixel
-git clone https://github.com/pi-bot/DC_motor-driver
+git clone https://github.com/pi-bot/DC_motor_driver
 
 echo "Arduino library configured and installation script complete. "
 
