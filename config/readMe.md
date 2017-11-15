@@ -1,4 +1,4 @@
-## About 
+# About 
 These steps set up the full software enviroment of the PiBot from a fresh install of Raspian. They are put here for reference and interest only. 
 
 **N.B.** the supplied sd card is pre-configured and should work *out-the-box*! There is now a collection of pre-made software images on the website here: (http://www.pibot.org/pioneers/distro/)
@@ -10,7 +10,7 @@ These steps have been tested as working on the Raspian stretch release: **2017-0
 3. Configure Remote Access
 4. Run the install scripts from **master.sh**
 
-### 1 Install latest Raspian
+## 1 Install latest Raspian
 
 The latest OS for the Raspberry Pi can be found [here](https://www.raspberrypi.org/downloads/raspbian/) and the official guide for installing images on your Raspberry Pi can be found [here](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
@@ -22,13 +22,13 @@ The latest version is **Raspian Stretch with Desktop** and this is based on the 
 
 Once you have a working Raspian OS on the Raspberry Pi you can then proceed to make customisations and install the PiBot software. 
 
-### 2 Changes to the default OS 
+## 2 Changes to the default OS 
 Raspian has a configuration GUI for making common alterations to its OS.  This is opened from  *Start > Preferences > Raspberry Pi Configurion*.
 Once opened we can now make the following changes: 
 
 From the **System** tab :
-- Change the password from *raspberr* e.g. *piBot*
-- Change the hostname from *raspberrypi* to something like *piBot-X1*
+- Change the password from *raspberry* to something else (e.g. *piBot*)
+- Change the hostname from *raspberrypi* to something else (e.g. *piBot-X2*)
 
 From the **interfaces** tab select to enable :
 - Camera
@@ -48,12 +48,12 @@ Remote desktop and command-line interfaces can be set up to access and control t
 
 A laptop is pehaps the best device for interfacing with the piBot as it is semi-portable (can move around with the robot), its good for typing (much better than a talblet), and should have full networking capabilities (a usb/ethernet adapter can also be used for wired ethernet connections).  The following guides are to set up both remote access through a remote desktop as well as through the command line (Secure Shell access SSH).  
 
-#### Remote Desktop with VNC
+### Remote Desktop with VNC
 
 VNC or Virtual NEtwork Connection allows you to connect to your systems desktop remotely over a network (including the internet).  The Raspberry Pi has a **VNC server** selected and now operational in its configs and it needs a couple of option changes to connect it to a **VNC viewer**.  (I use the inbuild VNC viewer Screen Sharing on my mac).  From the VNC Iconon on the desktop menu bar (top right next to bluetooth) select the VNC server interface window. From the munu pull down on the windows top-right select options.... Under **Encryption:** change to **prefere off**. under **Authentication** select **VNC password**.  Now on the right select **Users and Permissions**.  Double click the **Standard user (user)** from the top and choose a password that will be your login for this.  Click **apply**.  Now VNC is set up and ready to go. 
 for more details see https://www.raspberrypi.org/documentation/remote-access/vnc/
 
-### 4 Run Bash Install Scripts
+## 4 Run Bash Install Scripts
 
 **Bash** is the native and popular linux scripting language that is used in the Raspain command line interface.  Bash scripts predominantly sequences of terminal commands that are run sequentailly to complete various tasks. See [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) for a basic intro.  
 
