@@ -22,5 +22,6 @@ echo 'Disabling Serial Login...'
 echo 'Disabling Boot info...'
 #sudo sed -i'bk' -e's/console=ttyAMA0,115200.//' -e's/kgdboc=tty.*00.//'  /boot/cmdline.txt
 sed -i'bk' -e's/console=serial0,115200.//'  /boot/cmdline.txt
+echo 'Serial Configuration Script Complete'
 
 ##-------------------------------------------------------------------------------------------------
