@@ -96,4 +96,19 @@ The scrips are commented so the best way to see how they work and what changes t
 7)  **master.sh**	the lead script that runs the sub-scripts and logs the results.
 
 The **programmers.txt	& boards.txt** are used by the  **configureAudio.sh** script to modify the Arduino IDE. The **archive** and **related** folders are for previous code that are left for interest or reference.
-### Running The Scrpts 
+
+### Running The Scripts 
+The scripts can be run by first downloading this repo to the local machine:
+```
+git clone https://pi-bot@github.com/pi-bot/pioneers.git
+```
+**N.B. replace **pi-bot@** with your own username followed by **@**.
+Once downloaded with git it's neccessary to change the file permissions so that the scripts have permission to be execuatable:
+
+```
+cd pioneers/config
+sudo chmod +x *
+```
+
+
+
