@@ -118,7 +118,7 @@ sudo ./xxxxx.sh
 
 The master script is run with:
 ```
-sudo ./ master.sh
+sudo ./master.sh
 ```
 A reboot is then made to complete the configuration and set-up process. The system should now be fully configured and ready to use.
 
