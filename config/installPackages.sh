@@ -5,7 +5,9 @@
 #  The Arduino IDE - development enviroment for the PiBot's firmware 
 #  Minicom - a text-based serial port communications program. Used by the Raspian OS for two way communication to the PiBot MCU. Is mored capable than the Arduino IDE's built in console. 
 # VIM - text editor - most people will find something like nano easier and better. 
-#
+
+##-------------------------------------------------------------------------------------------------
+
 ## Install Arduino
 echo 'Installing Arduino IDE...'
 program="arduino"
