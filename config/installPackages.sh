@@ -28,3 +28,7 @@ if [ $condition -eq 0 ] ; then
 else
     echo "VIM is already installed - skipping"
 fi
+
+echo "Package Installation Script Complete"
+
+##-------------------------------------------------------------------------------------------------
