@@ -48,7 +48,7 @@ From the **Localisation** tab select *Set Keyboard* and select :
 
 Thats it! You can now reboot to bring these changes into effect.
 
-The only other change I made was to change the default background image of the Desktop. I did this by going to  *Start > Preferences > Appearance Settings*.  Then I selected *auror.jpg* from the **Picture** input. 
+The only other change I made was to change the default background image of the Desktop. I did this by going to  *Start > Preferences > Appearance Settings*.  Then I selected *aurora.jpg* from the **Picture** input. 
 
 
 ## 3 Remote User Interfacing with the Raspberry Pi 
