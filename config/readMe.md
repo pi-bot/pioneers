@@ -103,12 +103,23 @@ The scripts can be run by first downloading this repo to the local machine:
 git clone https://pi-bot@github.com/pi-bot/pioneers.git
 ```
 **N.B. replace **pi-bot@** with your own username followed by **@**.
-Once downloaded with git it's neccessary to change the file permissions so that the scripts have permission to be execuatable:
+Once downloaded it's neccessary to change the file permissions so that the scripts have permission to be execuatable:
 
 ```
 cd pioneers/config
 sudo chmod +x *
 ```
+Then each script can be run as:
+```
+./xxxxx.sh
+```
+(superimposing the actual script name for xxxxx.sh)
+
+The master script is run with:
+```
+./ master.sh
+```
+A reboot is then made to complete the configuration and set-up process. 
 
 
 
