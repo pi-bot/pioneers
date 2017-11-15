@@ -14,7 +14,7 @@ These steps have been tested as working on the Raspian stretch release: **2017-0
 
 The latest OS for the Raspberry Pi can be found [here](https://www.raspberrypi.org/downloads/raspbian/) and the official guide for installing images on your Raspberry Pi can be found [here](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
-The latest version is **Raspian Stretch with Desktop** and this is based on the based on the Debian Stretch Linux OS distribution. 
+The latest version is **Raspian Stretch with Desktop** and this is based on the Debian Stretch Linux OS distribution. 
 
 - **Version**: September 2017
 - **Release date**: 2017-09-07
