@@ -39,7 +39,8 @@ From the **interfaces** tab select to enable :
 - Camera
 - SSH
 - VNC
-- Serial 
+
+**N.B.** There is an option to enable the Serial Interface in the configuration. Do NOT select this. On the PiBot the serial interface is configured independently and this setting causes a conflict if selected.
 
 From the **Localisation** tab select *Set Keyboard* and select :
 - **Country**: United States
