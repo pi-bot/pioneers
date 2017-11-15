@@ -23,7 +23,7 @@ The latest version is **Raspian Stretch with Desktop** and this is based on the 
 Once you have a working Raspian OS on the Raspberry Pi you can then proceed to make customisations and install the PiBot software. 
 
 ## 2 Changes to the default OS 
-Raspian has a configuration GUI for making common alterations to its OS.  This is opened from  *Start > Preferences > Raspberry Pi Configurion*.
+Raspian has a configuration GUI for making common alterations to its OS.  This is opened from  *Start > Preferences > Raspberry Pi Configuration*.
 Once opened we can now make the following changes: 
 
 From the **System** tab :
