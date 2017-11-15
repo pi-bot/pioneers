@@ -5,10 +5,10 @@ echo " "
 echo "This installation script has the following requirements:"
 echo "1) Script must be run as root user"
 echo "2) Raspberry Pi must be v3"
-echo "3) The OS must be the latest 'Raspian Strech'"
+echo "3) The OS must be the latest 'Raspian Stretch'"
 echo "2) There must be a working internet connection"
 echo " "
-echo "Will now perfrom tests for these requirements before continuing ...."
+echo "Will now perform tests for these requirements before continuing ...."
 echo " "
 echo "1: Checking for execution as root...."
 
@@ -17,7 +17,6 @@ if [[ $EUID -ne 0 ]]; then
   	echo "This script must be run as root" 1>&2
   	exit 1
 fi
-
 echo " "
 echo "1: Root execution: PASSED. Now checking for Raspberry Pi board version..."
 echo "=================================="
