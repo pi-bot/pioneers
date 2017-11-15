@@ -22,24 +22,25 @@ else
 fi
 
 echo "Now customising the boards.txt and programmers.txt files"
-cd /usr/share/arduino/hardware/arduino
-if [ -f "boards.txt.bak" ]
+
+if [ -f "/usr/share/arduino/hardware/arduino/boards.txt.bak" ]
 then
 	echo "boards.txt already backed up."
-  rm -rf boards.txt
+  rm -rf /usr/share/arduino/hardware/arduino/boards.txt
 else
-	mv boards.txt boards.txt.bak
+	mv /usr/share/arduino/hardware/arduino/boards.txt /usr/share/arduino/hardware/arduino/boards.txt.bak
 fi
 
-if [ -f "programmers.txt.bak" ]
+if [ -f "/usr/share/arduino/hardware/arduino/programmers.txt.bak" ]
 then
 	echo "programmers.txt already backed up."
-  rm -rf programmers.txt
+  rm -rf /usr/share/arduino/hardware/arduino/programmers.txt
 else
-	mv programmers.txt programmers.txt.bak
+	/usr/share/arduino/hardware/arduino/programmers.txt /usr/share/arduino/hardware/arduino/programmers.txt.bak
 fi
 
-cp ~/pioneers/config/programmers.txt programmers.txt
-cp ~/pioneers/config/boards.txt boards.txt
+cp programmers.txt /usr/share/arduino/hardware/arduino/programmers.txt
+cp boards.txt /usr/share/arduino/hardware/arduino/boards.txt
 
+echo "boards.txt and programmers.txt swapped. Arduiono configuration script complete."
 ##-------------------------------------------------------------------------------------------------
