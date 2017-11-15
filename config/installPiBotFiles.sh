@@ -15,7 +15,7 @@ else
 	mv /usr/share/arduino/examples /usr/share/arduino/examples.backup
 fi
 
-cp ../examples /usr/share/arduino/examples
+cp -r ../examples /usr/share/arduino/examples
 
 ##-------------------------------------------------------------------------------------------------
 
