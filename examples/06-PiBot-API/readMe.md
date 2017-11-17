@@ -1,0 +1,1 @@
+The directory for the development of the PiBot API.  This is firmware that creates an application interface with the Raspberry Pi. It means that the Raspberry Pi can use Python to control the MCU and its sub-functions from a higher level.
