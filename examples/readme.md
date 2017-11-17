@@ -1,12 +1,4 @@
 # About
-This directory replaces the default examples for the Arduino IDE.  It shows examples for using every part of the PiBot.
+This directory replaces the default examples for the Arduino IDE. These sketches are referenced from the Wiki Exercise Guides. 
 
-
-```
-sudo mv /usr/share/arduino/examples /usr/share/arduino/examples-backup
-sudo mv /examples /usr/share/arduino/examples
-```
-
-
-
-See the examples-original folder for how the directory is organised.
+Please see the *PiBotFile.sh* install script in the Pioneer **Config** directory. This will replace and update the IDE's example files automattically. 
