@@ -1,4 +1,5 @@
 /* Flashlight Following Robot Code 3/25/2014
+From http://www.instructables.com/id/Arduino-Flashlight-Following-Robot/
 N.B. This example requires extra hardware. Included as an interesting follow on project.
 This code uses three light dependent resistors positioned
 on the right, front and left sides of a robot to control
