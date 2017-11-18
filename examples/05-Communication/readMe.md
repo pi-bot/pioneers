@@ -7,12 +7,12 @@ This communication directory is intended to locate examples of serial communicat
 ## Ported Arduino Examples 
 These have associated tutorial pages by arduino (see links).
 
-[ASCIITable](https://www.arduino.cc/en/Tutorial/ASCIITable): Demonstrates Arduino's advanced serial output functions.
-[Dimmer](https://www.arduino.cc/en/Tutorial/Dimmer): Move the mouse to change the brightness of an LED.
-[Physical Pixel](https://www.arduino.cc/en/Tutorial/PhysicalPixel): Turn a LED on and off by sending data to your Arduino from Processing or Max/MSP.
-[Read ASCII String](https://www.arduino.cc/en/Tutorial/ReadASCIIString): Parse a comma-separated string of integers to fade an LED.
-[Serial Call Response](https://www.arduino.cc/en/Tutorial/SerialCallResponse): Send multiple variables using a call-and-response (handshaking) method.
-[Serial Call Response ASCII](https://www.arduino.cc/en/Tutorial/SerialCallResponseASCII): Send multiple variables using a call-and-response (handshaking) method, and ASCII-encode the values before sending.
-[Serial Event](https://www.arduino.cc/en/Tutorial/SerialEvent): Demonstrates the use of SerialEvent().
+- [ASCIITable](https://www.arduino.cc/en/Tutorial/ASCIITable): Demonstrates Arduino's advanced serial output functions.
+- [Dimmer](https://www.arduino.cc/en/Tutorial/Dimmer): Move the mouse to change the brightness of an LED.
+- [Physical Pixel](https://www.arduino.cc/en/Tutorial/PhysicalPixel): Turn a LED on and off by sending data to your Arduino from Processing or Max/MSP.
+- [Read ASCII String](https://www.arduino.cc/en/Tutorial/ReadASCIIString): Parse a comma-separated string of integers to fade an LED.
+- [Serial Call Response](https://www.arduino.cc/en/Tutorial/SerialCallResponse): Send multiple variables using a call-and-response (handshaking) method.
+- [Serial Call Response ASCII](https://www.arduino.cc/en/Tutorial/SerialCallResponseASCII): Send multiple variables using a call-and-response (handshaking) method, and ASCII-encode the values before sending.
+- [Serial Event](https://www.arduino.cc/en/Tutorial/SerialEvent): Demonstrates the use of SerialEvent().
 
 Please suggest further sketch and examples for use with the PiBot!
