@@ -15,4 +15,8 @@ These have associated tutorial pages by arduino (see links).
 - [Serial Call Response ASCII](https://www.arduino.cc/en/Tutorial/SerialCallResponseASCII): Send multiple variables using a call-and-response (handshaking) method, and ASCII-encode the values before sending.
 - [Serial Event](https://www.arduino.cc/en/Tutorial/SerialEvent): Demonstrates the use of SerialEvent().
 
-Please suggest further sketch and examples for use with the PiBot!
+## To Do 
+Replace corresponding Python examples to the above Arduino examples.
+Add furhter examples more specific to the use of Python with the PiBot. (also with corresponding Python examples).
+
+Any help from Pioneers with the above appreceiated!
