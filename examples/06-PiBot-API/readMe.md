@@ -26,4 +26,15 @@ The library can:
 
 The library supports any primary data types, and zero to many multiple arguments. Arguments can either be sent in plain text (to be human readable) or in binary form (to be efficient).
 
-Both PyCmdMessenger 
+Both [PyCmdMessenger](https://github.com/harmsm/PyCmdMessenger) and [Arduino_CmdMessenger](https://github.com/thijse/Arduino-CmdMessenger) are avaliable and maintained on GitHub. (see links)
+
+This directory is to show examples of useing the **PyCmdMessenger** to send receive data and commands with the MCU from Python and will be used to demontrate versions of complete API's.
+
+### Dynamic Firmware
+One of the exciting things about hte PiBot is its ability to dynamically flash and change the Firmware on the MCU *on-the-fly*.  This means that firware can adapt to various different situations and contexts. Possibilities include:
+- Firware for mapping a location
+- Firware dedicated to movement and navigation 
+- Firmware dedicated to danceing and entertainment
+- Firmware dedicated to playing particular games
+
+It would be amazing if Pioneers get as far as developping their own API's and sharing them with the community from here!
