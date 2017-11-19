@@ -32,6 +32,7 @@ cd /usr/share/arduino/libraries
 git clone https://github.com/pi-bot/NeoPixel
 git clone https://github.com/pi-bot/DC_motor_driver
 git clone https://github.com/pi-bot/Servo
+git clone https://github.com/pi-bot/NewPing
 
 echo "Arduino library configured and installation script complete. "
 
