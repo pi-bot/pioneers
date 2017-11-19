@@ -35,7 +35,7 @@ else
 fi
 echo " "
 echo "Will now perform tests for these requirements before continuing ...."
-bash checkCompatible.sh &&
+bash ./checkCompatible.sh &&
 ## Start Installation
 echo " "
 echo "System has satified all requirement for PiBot Installation..."  | tee -a $log
