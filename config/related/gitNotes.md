@@ -27,11 +27,12 @@ The other common situation I'm finding is that I'm doing live development on the
 
 stash your local changes
 
-```git stash```
+``` git stash ```
+
 update the branch to the latest code
-```git pull``
+``` git pull ```
 Merge your local changes into the latest code
-```git stash apply```
+``` git stash apply ```
 Add, commit and push your changes
 ```
 git add
