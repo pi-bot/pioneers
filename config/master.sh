@@ -71,7 +71,7 @@ echo "Arduino configured successfully "  | tee -a $log
 echo "PiBot files integrated successfully "  | tee -a $log
 ##-------------------------------------------------------------------------------------------------
 echo "PiBot setup complete!" | tee -a $log
-$ date | tee -a $log
+date | tee -a $log
 echo "Will now reboot in 20 seconds. This script can terminated before a reboot with 'cntrl+c' "
 sleep 20
 sudo /sbin/shutdown -r now
