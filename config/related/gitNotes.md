@@ -22,18 +22,23 @@ That effectively resyncs all the local files from the repo and allows me to exec
 
 The other common situation I'm finding is that I'm doing live development on the raspberry pi and I need to send new updates back to the repo on github. 
  
- Advice for the best way to do thi is:
- I think that the best way to do this is.
+Advice for the best way to do this is:
 
 stash your local changes
 
-``` git stash ```
+```
+git stash
+```
 
-update the branch to the latest code
-``` git pull ```
-Merge your local changes into the latest code
-``` git stash apply ```
-Add, commit and push your changes
+update the branch to the latest code:
+```
+git pull
+```
+Merge your local changes into the latest code:
+```
+git stash apply
+```
+Add, commit and push your changes:
 ```
 git add
 git commit
