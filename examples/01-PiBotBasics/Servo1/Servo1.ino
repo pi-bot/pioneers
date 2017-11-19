@@ -1,6 +1,6 @@
 #include <Servo.h> 
 
-const int servoPin = 9;   // (1)
+const int servoPin = 5;   // (1)
 
 Servo servo;            // (2)
 
