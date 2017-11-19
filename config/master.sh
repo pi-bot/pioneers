@@ -4,11 +4,12 @@
 # sub-scripts can be run on individual lines:
 # bash script1.sh ;  (in this case the process will continue whether the script is exited successfully or not.
 # or if you want to fun a script on condition of a successfull completion you can use the form:
-# bash script1.sh &&
-# bash script2.sh &&
-# bash script3.sh
+# script1.sh &&
+# script2.sh &&
+# script3.sh
 # 
 # execution and errors in the script are logged in the install.log iogfile
+cd "$(dirname "$0")"
 log=install.log
 date | tee $log
 echo -e "\E[32m"
@@ -35,7 +36,7 @@ else
 fi
 echo " "
 echo "Will now perform tests for these requirements before continuing ...."
-bash ./checkCompatible.sh &&
+./checkCompatible.sh &&
 ## Start Installation
 echo " "
 echo "System has satified all requirement for PiBot Installation..."  | tee -a $log
@@ -56,17 +57,17 @@ else
     exit 0
 fi
 echo " "
-bash ./installPackages.sh &&
+./installPackages.sh &&
 echo "packages installed successfully "  | tee -a $log
-bash ./configureSerial.sh &&
+./configureSerial.sh &&
 echo "serial configured successfully "  | tee -a $log
-bash ./configureAudio.sh &&
+./configureAudio.sh &&
 echo "Audio configured successfully "  | tee -a $log
-bash ./modAvrdude.sh &&
+./modAvrdude.sh &&
 echo "avrDude modded succesfully"  | tee -a $log
-bash ./configureArduino.sh &&
+./configureArduino.sh &&
 echo "Arduino configured successfully "  | tee -a $log
-bash ./installPiBotFiles.sh &&
+./installPiBotFiles.sh &&
 echo "PiBot files integrated successfully "  | tee -a $log
 ##-------------------------------------------------------------------------------------------------
 echo "PiBot setup complete!" | tee -a $log
