@@ -9,5 +9,5 @@ Firstly I `cd` to get the files needing directorring in the the current director
 Then I went through each:
 
 ```	
-for file in *.txt; do mkdir -- "${file%.txt}"; mv -- "$file" "${file%.txt}"; done
+for file in *.ino; do mkdir -- "${file%.txt}"; mv -- "$file" "${file%.ino}"; done
 ```
