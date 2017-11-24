@@ -32,8 +32,8 @@ fi
 
 cd /usr/share/arduino/libraries
 
-#sed -i '13s/9/6/' examples/Knob/Knob.ino
-#sed -i '15s/9/6/' examples/Sweep/Sweep.ino
+#sed -i '13s/9/6/' Servo/examples/Knob/Knob.ino
+#sed -i '15s/9/6/' Servo/examples/Sweep/Sweep.ino
 
 
 git clone https://github.com/pi-bot/NeoPixel
