@@ -1,3 +1,5 @@
+#Currently requires the library import. NOT YET KImplemented. USe Stepper1.py for now:)
+
 import RPi.GPIO as GPIO
 import time
 import threading
