@@ -3,7 +3,7 @@ import time
 import threading
 
 #This program use the board numerotation for GPIOs, so up left is 1 and down right is 40
-STEPPER_GPIOS = [16,33,32,18]#[23,13,12,24]
+STEPPER_GPIOS = [16,26,20,21]   #This pin assignment is for Stepper S1 use [5,6,12,13] for Stepper S2
 
 class Stepper():
       
