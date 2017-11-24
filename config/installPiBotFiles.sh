@@ -28,6 +28,7 @@ else
  	mkdir /usr/share/arduino/libraries.backup
 	mv /usr/share/arduino/libraries/* /usr/share/arduino/libraries.backup/
 fi
+# cp -r /usr/share/arduino/libraries.backup/Servo /usr/share/arduino/libraries/ && cp -r /usr/share/arduino/libraries.backup/Stepper /usr/share/arduino/libraries/
 cd /usr/share/arduino/libraries
 git clone https://github.com/pi-bot/NeoPixel
 git clone https://github.com/pi-bot/DC_motor_driver
