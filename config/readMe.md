@@ -87,7 +87,7 @@ This directory contains all the scripts to set up a customised and configured so
 
 The scrips are commented so the best way to see how they work and what changes they are making is to look at them directly.  For now here is an overaview of all scripts with a brief description of what they do. 
 
-0) **Compatible.sh** - checks that the Raspberry Pi and Raspian enviroment are compatible
+0) **checkCompatible.sh** - checks that the Raspberry Pi and Raspian enviroment are compatible
 1) **installPackages.sh** checks and install required software packages
 2) **configureSerial.sh**	configure a serial connection to the PiBot Board
 3) **configureAudio.sh** configure the Audio Interfaces
