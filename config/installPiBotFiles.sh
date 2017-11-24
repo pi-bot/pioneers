@@ -29,7 +29,13 @@ else
 	mv /usr/share/arduino/libraries/* /usr/share/arduino/libraries.backup/
 fi
 # cp -r /usr/share/arduino/libraries.backup/Servo /usr/share/arduino/libraries/ && cp -r /usr/share/arduino/libraries.backup/Stepper /usr/share/arduino/libraries/
+
 cd /usr/share/arduino/libraries
+
+#sed -i '13s/9/6/' examples/Knob/Knob.ino
+#sed -i '15s/9/6/' examples/Sweep/Sweep.ino
+
+
 git clone https://github.com/pi-bot/NeoPixel
 git clone https://github.com/pi-bot/DC_motor_driver
 git clone https://github.com/pi-bot/Servo
