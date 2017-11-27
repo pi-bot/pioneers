@@ -1,3 +1,5 @@
+#include <PBmotorDriver.h>
+
 /**
 * Copyright:  Agilic Ltd
 * Noc. 20, 2017
@@ -6,7 +8,7 @@
 * intended to remain free for all to share.
 */
 
-#include <PBmotorDriver.h>
+
 // Create an instance of the motors 
 PBmotorDriver  motors;
 
@@ -23,6 +25,11 @@ int RMpower = 122;
 
 void setup() {
   Serial.begin(9600); 
+  delay (1000);
+  Serial.println("Move the robot with the following keys: \n");
+  Serial.println(" x:backward\n a:left\n d:right \n s:stop\n");
+  Serial.println("Press 'return' between each command \n \n");
+
 }
 
 void loop()
@@ -33,40 +40,38 @@ void loop()
     Serial.readBytes(&byte, 1);
     // press w to move forward
     if (byte == MOVE_FORWARD) {
-    setPwrs(LMpower, RMpower) 
-
+    motors.setPwrs(LMpower, RMpower);
       Serial.println("moving forward \n");
       byte = 0;
     }
     // press x to move backward
     if (byte == MOVE_BACK) {
-      setPwrs(-LMpower, -RMpower) 
-      Serial.println("move back \n");
+      motors.setPwrs(-LMpower, -RMpower);
+      Serial.println("moving back \n");
       byte = 0;
     }
     // press a to turn left
     if (byte == MOVE_LEFT) {
-      stopRM;
-      setLMpwr(LMpower); 
-      Serial.println("move left \n");
+      motors.stopRM();
+      motors.setLMpwr(LMpower); 
+      Serial.println("moving left \n");
       byte = 0;
     }
     // press d to turn right
     if (byte == MOVE_RIGHT) {
-      stopLM;
-      setRMpwr(LMpower); 
-      Serial.println("move right \n");
+      motors.stopLM();
+      motors.setRMpwr(LMpower); 
+      Serial.println("moving right \n");
       byte = 0;
     }
     // press s to default stop
     if (byte == FULL_STOP) {
-      back_left_servo.write(LEFT_DEFAULT_STOP);
-      back_right_servo.write(RIGHT_DEFAULT_STOP);
+      motors.stopM();
       Serial.println("full stop \n");
       byte = 0;
     }
   }
   
-  Serial.println("Have quit interactive movement loop \n");
+  Serial.println("Have quit the interactive movement loop \n");
   Serial.end();
 }
