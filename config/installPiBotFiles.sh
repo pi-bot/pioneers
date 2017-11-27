@@ -39,7 +39,7 @@ sed -i '15s/9/6/' Servo/examples/Sweep/Sweep.ino
 sed -i '15s/9/6/' Servo/examples/Sweep/Sweep.ino
 
 git clone https://github.com/pi-bot/NeoPixel
-git clone https://github.com/pi-bot/DC_motor_driver
+git clone https://github.com/pi-bot/PBmotorDriver
 git clone https://github.com/pi-bot/NewPing
 
 echo "Arduino library configured and installation script complete. "
