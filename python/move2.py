@@ -2,27 +2,24 @@ import serial
 import time
 import pygame
 
-board = serial.Serial('/dev/ttyS0', 9600, timeout = 1)
+sendCmd = serial.Serial('/dev/ttyS0', 9600, timeout = 1)
 time.sleep(2)
 
-screen = pygame.display.set_mode([300,100])
-screen.fill([255,255,255])
-pygame.display.set_caption("Windows Controller")
 
 def forward():
-   board.write("F")
+   sendCmd.write("w")
    print("Forward")
 def backward():
-   board.write("B")
+   sendCmd.write("x")
    print("Backward")
 def left():
-   board.write("L")
+   sendCmd.write("a")
    print("Left")
 def right():
-   board.write("R")
+   sendCmd.write("d")
    print("Right")
 def stop():
-   board.write("S")
+   sendCmd.write("x")
    print("Stop")
 
 while 1:
@@ -31,16 +28,16 @@ while 1:
        if event.type == pygame.QUIT:
            break
        elif event.type == pygame.KEYDOWN:
-           if event.key == pygame.K_w:
+           if event.key == pygame.K_UP:
                    print"Forward"
                    forward()
-           if event.key == pygame.K_a:
+           if event.key == pygame.K_LEFT:
                    print"Left"
                    left()
-           if event.key == pygame.K_s:
+           if event.key == pygame.KEY_DOWN:
                    print"Backward"
                    backward()
-           if event.key == pygame.K_d:
+           if event.key == pygame.K_RIGHT:
                    print"Right"
                    right()
            if event.key == pygame.K_ESCAPE:
@@ -48,5 +45,4 @@ while 1:
        elif event.type == pygame.KEYUP:
                    print"Stop"
                    stop()
-   pygame.display.update()
 pygame.quit
