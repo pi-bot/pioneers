@@ -1,11 +1,5 @@
-
-//A variable to hold the level of coolness
-int coolFactor = 3;
- 
 void setup() {
- 
   Serial.begin(9600);
- 
 }
  
 void loop() {
