@@ -5,6 +5,10 @@ import pygame
 sendCmd = serial.Serial('/dev/ttyS0', 9600, timeout = 1)
 time.sleep(2)
 
+screen = pygame.display.set_mode([300,100])
+screen.fill([255,255,255])
+pygame.display.set_caption("Windows Controller")
+
 
 def forward():
    sendCmd.write("w")
@@ -45,4 +49,5 @@ while 1:
        elif event.type == pygame.KEYUP:
                    print"Stop"
                    stop()
+   pygame.display.update()
 pygame.quit
