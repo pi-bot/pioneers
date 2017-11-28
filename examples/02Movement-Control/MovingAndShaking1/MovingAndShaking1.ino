@@ -1,16 +1,16 @@
-#include <PBmotorDriver.h>
+/*********************************************
+This sketch implemenents a basic navigation 
+interface for the robots movement. 
+See (https://github.com/pi-bot/pioneers/wiki/Moving-and-Shaking)
 
-/**
-* Copyright:  Agilic Ltd
-* Noc. 20, 2017
-* This code is allowed to be altered and used 
-* for non-profit purposes by hobbyists and is
-* intended to remain free for all to share.
-*/
+Copyright:  Agilic Ltd
+Nov. 20, 2017
 
+Copy and alter for non-profit and learning
+********************************************/
+#include <PBmotorDriver.h> //Inc. lib to use its functions
 
-// Create an instance of the motors 
-PBmotorDriver  motors;
+PBmotorDriver  motors; // Create an instance of the motors 
 
 // Set core variables:
 // speed can be 0 to 255
@@ -67,7 +67,7 @@ void loop()
     // press s to default stop
     if (byte == FULL_STOP) {
       motors.stopM();
-      Serial.println("full stop \n");
+      Serial.println("movement stoped \n");
       byte = 0;
     }
   }
