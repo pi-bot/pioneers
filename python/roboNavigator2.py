@@ -25,6 +25,18 @@ def right():
 def stop():
    sendCmd.write("x")
    print("Stop")
+def s1():
+   sendCmd.write("1")
+   print("Initiated speed mode 1")
+def s2():
+   sendCmd.write("1")
+   print("Initiated speed mode 2")   
+def s3():
+   sendCmd.write("1")
+   print("Initiated speed mode 3")   
+def s4():
+   sendCmd.write("1")
+   print("Initiated speed mode 4")   
 
 while 1:
    key = pygame.key.get_pressed()
@@ -44,7 +56,19 @@ while 1:
            if event.key == pygame.K_RIGHT:
                    print"Right"
                    right()
-           if event.key == pygame.K_ESCAPE:
+           if event.key == pygame.K_1:
+                   print"Power mode 1"
+                   s1()  
+           if event.key == pygame.K_2:
+                   print"Power mode 2"
+                   s2()   
+           if event.key == pygame.K_3:
+                   print"Power mode 3"
+                   s3()   
+           if event.key == pygame.K_4:
+                   print"Power mode 4"
+                   s4()                     
+           if event.key == pygame.K_ESCAPE:     
                    break
        elif event.type == pygame.KEYUP:
                    print"Stop"
