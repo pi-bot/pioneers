@@ -41,7 +41,7 @@ sed -i '15s/9/6/' Servo/examples/Sweep/Sweep.ino
 git clone https://github.com/pi-bot/NeoPixel
 git clone https://github.com/pi-bot/PBmotorDriver
 git clone https://github.com/pi-bot/NewPing
-git clone https://github.com/br3ttb/Arduino-PID-Library/
+#git clone https://github.com/br3ttb/Arduino-PID-Library/
 
 echo "Arduino library configured and installation script complete. "
 
